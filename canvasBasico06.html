@@ -1,0 +1,316 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Taller #2</title>
+<style>
+#miCanvas{ 	
+	padding: 3px 10px;
+	border: PowderBlue 5px solid;
+	border-radius:100px
+	}
+</style>
+<script>
+window.onload = function(){
+	var canvas = document.getElementById("miCanvas");
+	if(canvas && canvas.getContext){
+		var ctx = canvas.getContext("2d");
+		if(ctx){
+			var gradiente = ctx.createLinearGradient(0,0,0,canvas.height);
+			gradiente.addColorStop(0, "#154360");
+			gradiente.addColorStop(0.7, "#2471a3");
+			gradiente.addColorStop(0.8, "#5499c7");
+			gradiente.addColorStop(1, "#85c1e9");
+			
+			ctx.fillStyle = gradiente;
+			ctx.fillRect(0,0,canvas.width,canvas.height);
+			//Descripcion de lineas
+			ctx.lineWidth = 10;
+			ctx.strokeStyle = "white";
+			ctx.fillStyle = "red";
+			//1era Linea Vertical S
+			ctx.beginPath();
+			ctx.lineTo(50,50);
+			ctx.lineTo(50,100);
+			ctx.stroke();
+			//Primea linea S
+			ctx.lineCap = "round";
+			ctx.moveTo(50,50);
+			ctx.lineTo(120,50);
+			ctx.stroke();
+			//2da Linea Vertical S
+			ctx.beginPath();
+			ctx.lineTo(120,100);
+			ctx.lineTo(120,150);
+			ctx.stroke();
+			//Segunda linea S
+			ctx.lineCap = "round";
+			ctx.moveTo(50,100);
+			ctx.lineTo(120,100);
+			ctx.stroke();
+			//Tercera linea S	
+			ctx.lineCap = "round";
+			ctx.moveTo(50,150);
+			ctx.lineTo(120,150);
+			ctx.stroke();
+			//Base E
+			ctx.beginPath();
+			ctx.lineTo(200,150);
+			ctx.lineTo(150,150);
+			ctx.stroke();
+			//Linea vertical E
+			ctx.lineCap = "round";
+			ctx.moveTo(150,50);
+			ctx.lineTo(150,150);
+			ctx.stroke();
+			//Linea centro h E
+			ctx.beginPath();
+			ctx.lineTo(200,100);
+			ctx.lineTo(150,100);
+			ctx.stroke();
+			//Primera Linea E
+			ctx.beginPath();
+			ctx.lineTo(200,50);
+			ctx.lineTo(150,50);
+			ctx.stroke();
+			//Linea vertical B
+			ctx.lineCap = "round";
+			ctx.moveTo(230,50);
+			ctx.lineTo(230,150);
+			ctx.stroke();
+			//Linea centro B arriba
+			ctx.beginPath();
+			ctx.lineTo(230,100);
+			ctx.lineTo(280,75);
+			ctx.stroke();
+			//Linea centro B abajo
+			ctx.beginPath();
+			ctx.lineTo(230,100);
+			ctx.lineTo(280,125);
+			ctx.stroke();
+			//Linea centro B abajo
+			ctx.beginPath();
+			ctx.lineTo(230,150);
+			ctx.lineTo(280,125);
+			ctx.stroke();
+			//Linea centro B arriba
+			ctx.beginPath();
+			ctx.lineTo(230,50);
+			ctx.lineTo(280,75);
+			ctx.stroke();
+			//Linea vertical izq A
+			ctx.lineCap = "round";
+			ctx.moveTo(325,50);
+			ctx.lineTo(300,150);
+			ctx.stroke();
+			//Linea vertical der A
+			ctx.lineCap = "round";
+			ctx.moveTo(325,50);
+			ctx.lineTo(350,150);
+			ctx.stroke();
+			//Linea Medio A
+			ctx.beginPath();
+			ctx.lineTo(315,100);
+			ctx.lineTo(335,100);
+			ctx.stroke();
+
+			//Linea Base S
+			ctx.beginPath();
+			ctx.lineTo(380,150);
+			ctx.lineTo(440,150);
+			ctx.stroke();
+			//Linea Vertical Der S
+			ctx.beginPath();
+			ctx.lineTo(440,100);
+			ctx.lineTo(440,150);
+			ctx.stroke();
+			//Linea Horizontal Medio S
+			ctx.beginPath();
+			ctx.lineTo(440,100);
+			ctx.lineTo(380,100);
+			ctx.stroke();
+			//Linea Vertical arriba S
+			ctx.beginPath();
+			ctx.lineTo(380,100);
+			ctx.lineTo(380,50);
+			ctx.stroke();
+			//Linea Superior arriba S
+			ctx.beginPath();
+			ctx.lineTo(380,50);
+			ctx.lineTo(440,50);
+			ctx.stroke();
+
+			//Linea Superior arriba T
+			ctx.beginPath();
+			ctx.lineTo(470,50);
+			ctx.lineTo(540,50);
+			ctx.stroke();
+			//Linea medio arriba T
+			ctx.beginPath();
+			ctx.lineTo(500,50);
+			ctx.lineTo(500,150);
+			ctx.stroke();
+			//Linea medio I
+			ctx.beginPath();
+			ctx.lineTo(570,50);
+			ctx.lineTo(570,150);
+			ctx.stroke();
+
+			//Linea vertical izq A
+			ctx.lineCap = "round";
+			ctx.moveTo(635,50);
+			ctx.lineTo(610,150);
+			ctx.stroke();
+			//Linea vertical der A
+			ctx.lineCap = "round";
+			ctx.moveTo(635,50);
+			ctx.lineTo(670,150);
+			ctx.stroke();
+			//Linea Medio A
+			ctx.beginPath();
+			ctx.lineTo(630,100);
+			ctx.lineTo(650,100);
+			ctx.stroke();
+
+			//Linea izquierda N
+			ctx.beginPath();
+			ctx.lineTo(700,50);
+			ctx.lineTo(700,150);
+			ctx.stroke();			
+			//Linea mitad N
+			ctx.beginPath();
+			ctx.lineTo(700,50);
+			ctx.lineTo(750,150);
+			ctx.stroke();
+			//Linea derecha N
+			ctx.beginPath();
+			ctx.lineTo(750,50);
+			ctx.lineTo(750,150);
+			ctx.stroke();
+
+			/*Apellido*/
+			//Linea vertical izq A
+			ctx.lineCap = "round";
+			ctx.moveTo(85,200);
+			ctx.lineTo(50,300);
+			ctx.stroke();
+			//Linea vertical der A
+			ctx.lineCap = "round";
+			ctx.moveTo(85,200);
+			ctx.lineTo(110,300);
+			ctx.stroke();
+			//Linea Medio A
+			ctx.beginPath();
+			ctx.lineTo(70,250);
+			ctx.lineTo(95,250);
+			ctx.stroke();
+
+			//Linea Medio Base C
+			ctx.beginPath();
+			ctx.lineTo(150,300);
+			ctx.lineTo(200,300);
+			ctx.stroke();
+			//Linea Medio Base C
+			ctx.beginPath();
+			ctx.lineTo(150,200);
+			ctx.lineTo(150,300);
+			ctx.stroke();
+			//Linea Medio Base C
+			ctx.beginPath();
+			ctx.lineTo(150,200);
+			ctx.lineTo(200,200);
+			ctx.stroke();
+
+			//Linea Medio Base H
+			ctx.beginPath();
+			ctx.lineTo(230,250);
+			ctx.lineTo(280,250);
+			ctx.stroke();
+			//Linea Medio Base H
+			ctx.beginPath();
+			ctx.lineTo(230,200);
+			ctx.lineTo(230,300);
+			ctx.stroke();
+			//Linea Medio Base H
+			ctx.beginPath();
+			ctx.lineTo(280,200);
+			ctx.lineTo(280,300);
+			ctx.stroke();
+
+			//Linea Medio Base U
+			ctx.beginPath();
+			ctx.lineTo(305,200);
+			ctx.lineTo(305,300);
+			ctx.stroke();
+			//Linea Medio Base U
+			ctx.beginPath();
+			ctx.lineTo(305,300);
+			ctx.lineTo(350,300);
+			ctx.stroke();
+			//Linea Medio Base U
+			ctx.beginPath();
+			ctx.lineTo(350,200);
+			ctx.lineTo(350,300);
+			ctx.stroke();
+
+			//Linea Medio Base R
+			ctx.beginPath();
+			ctx.lineTo(380,200);
+			ctx.lineTo(380,300);
+			ctx.stroke();
+			//Linea Medio Base R
+			ctx.beginPath();
+			ctx.lineTo(380,200);
+			ctx.lineTo(440,225);
+			ctx.stroke();
+			//Linea Medio Base R
+			ctx.beginPath();
+			ctx.lineTo(380,250);
+			ctx.lineTo(440,225);
+			ctx.stroke();
+			//Linea Medio Base R
+			ctx.beginPath();
+			ctx.lineTo(380,250);
+			ctx.lineTo(440,300);
+			ctx.stroke();
+			
+			//Linea Base Y
+			ctx.beginPath();
+			ctx.lineTo(495,250);
+			ctx.lineTo(495,300);
+			ctx.stroke();
+			//Linea Base Y
+			ctx.beginPath();
+			ctx.lineTo(470,200);
+			ctx.lineTo(495,250);
+			ctx.stroke();
+			//Linea Base Y
+			ctx.beginPath();
+			ctx.lineTo(530,200);
+			ctx.lineTo(495,250);
+			ctx.stroke();
+			//Insertar Imagen
+			var imagen = new Image();
+			function procesaImagen(){
+				ctx.drawImage(imagen,600,200,290,400);
+			}
+			imagen.src = "imagenes/indice.jpg";
+			imagen.onload = function(e){
+				procesaImagen();
+		
+			}
+			
+		} else {
+			alert("Error al crear tu contexto");	
+		}
+	}
+}
+</script>
+</head>
+<body>
+<h1>Taller #2</h1>
+<canvas id="miCanvas" width="1200px" height="600px">
+Tu navegador no soporta CANVAS
+</canvas>
+</body>
+</html>
